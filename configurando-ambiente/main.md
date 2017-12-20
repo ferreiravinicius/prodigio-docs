@@ -3,8 +3,8 @@
 1. [Maven](#maven)
     - [Configurando a Instalação](#configurando-a-instalação)
     - [Setando o Arquivo de Configuração (XML)](#setando-o-arquivo-de-configuração)
-2. [JBoss (Servidor de Aplicação)]()
-3. [PostgreSQL (Banco de Dados)]()
+2. [JBoss (Servidor de Aplicação)](#)
+3. [PostgreSQL (Banco de Dados)](#)
 
 
 ## Maven
@@ -14,7 +14,7 @@
 Na barra de menu superior do Eclipse Luna selecione `Window > Preferences`.  
 No submenu `Maven > Installations` clique em `Add`.
 
-![Instalação do Maven](/imagens/maven/1-preferences-maven-installations-add.png)
+![Instalação do Maven](./imagens/maven/1-preferences-maven-installations-add.png)
 
 No modal aberto, em `Installation Home` procure pelo diretório do Maven na pasta do Prodígio.  
 _Como padrão em `C:\Prodemge\maven\apache-maven-x.x`._
