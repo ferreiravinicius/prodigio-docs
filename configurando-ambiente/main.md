@@ -85,5 +85,12 @@ Selecione os dois jars do projeto disponiveis em `Available`<sup>1</sup>, clique
 ![Adicionando Projeto](./imagens/jboss/7-add-available-configured.png)
 
 Agora em diante o projeto esta pronto para ser publicado. Selecione os jars na view `Servers` clique com o botão direito sobre eles e selecione `Full Publish`.  
+Ao iniciar o servidor, sua aplicação podera ser acessada pela url `**http://localhost:8080/NOMEAPLICACAO-frontend**`
+
+# PostgreSQL
+
+Execute o Portable PostgreSQL disponibilizado na pasta do Prodígio (padrão `C:\Prodemge\databases\postgre_portable\PortablePostgreSQL.exe`).  
+
+  
 
 
