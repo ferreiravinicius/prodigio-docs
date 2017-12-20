@@ -1,15 +1,19 @@
-# Configurando o Ambiente de Desenvolvimento
+Configurando o Ambiente de Desenvolvimento
+===
 
 1. [Maven](#maven)
     - [Configurando a Instalação](#configurando-a-instalação)
     - [Setando o Arquivo de Configuração (XML)](#setando-o-arquivo-de-configuração)
 2. [JBoss (Servidor de Aplicação)](#jboss)
+	- [Criando o Servidor](#criando-o-servidor)
+	- [Configurando o Servidor e Conexões (standalone)](#configurando-o-servidor-e-conexões)
+	- [Adicionando o Projeto ao Servidor](#adicionando-o-projeto-ao-servidor)
 3. [PostgreSQL (Banco de Dados)](#)
 
 
-## Maven
+# Maven
 
-#### Configurando a Instalação
+### Configurando a Instalação
 
 Na barra de menu superior do Eclipse Luna selecione `Window > Preferences`.  
 No submenu `Maven > Installations` clique em `Add`.
@@ -25,7 +29,7 @@ Uma vez de volta no submenu `Installations` certifique-se de selecionar o runtim
 
 ![Marcar o runtime correto](./imagens/maven/3-maven-seleciona-runtime-aplica.png)
 
-#### Setando o Arquivo de Configuração
+### Setando o Arquivo de Configuração
 
 Na janela `Window > Preferences` selecione o submenu `Maven > User Settings`.  
 No campo `User Settings` selecione o arquivo `settings.xml` no diretório do Maven disponibilizado na pasta do Prodígio.  
@@ -33,9 +37,9 @@ _Como padrão em `C:\Prodemge\maven\apache-maven-x.x\conf\settings.xml`_
 
 ![Selecione o XML de configuração](./imagens/maven/4-preferences-usettings-browser.png)
 
-## JBoss
+# JBoss
 
-#### Criando o Servidor
+### Criando o Servidor
 
 Na barra de ferramentas superior do Eclipse Luna seleciona `Server > New server`.
 
@@ -52,7 +56,7 @@ Certifique-se de selecionar `Create new runtime (next page)` e clique em `Next`.
 No campo `Home Directory` selecione o diretório do JBoss disponibilizado na pasta do Prodígio (_padrão `C:\Prodemge\servers\jboss-eap-6.4`_).  
 Em `Runtime JRE` marque `Alternate JRE` e selecione o `jdk1.8.0_72` e clique em `Finish`. 
 
-#### Configurando o Servidor e Conexões
+### Configurando o Servidor e Conexões
 
 Na view `Servers` do Eclipse Luna abra o arquivo de configuração do servidor em `Filesets > Configuration File > standalone.xml`.  
 Na tag `datasource`, nos atributos `jndi-name` e `pool-name` troque "*NOMEAPLICACAO*" pelo nome da sua aplicação.  
@@ -68,7 +72,7 @@ Na tag `connection-url` troque "*NOMEBANCODEDADOS*" pelo nome que sera dado ao b
 
 Salve o arquivo e o servidor estará devidamente configurado.
 
-#### Adicionando o Projeto ao Servidor
+### Adicionando o Projeto ao Servidor
 
 **Nota:** para este passo é necessário ter [criado um projeto do Prodígio](#).
 
