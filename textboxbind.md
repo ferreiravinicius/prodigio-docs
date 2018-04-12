@@ -9,7 +9,7 @@ Este componente é uma caixa de edição utilizada para a manipulação de texto
 {% tabs %}
 {% tab title="XML" %}
 ```java
-<textboxbind nomeDoObjeto="classecontrole.objetoAtual.colecaoPersistida" />
+<textboxbind nomeDoObjeto="classecontrole.objetoAtual.minhaPropriedade" />
 ```
 {% endtab %}
 
