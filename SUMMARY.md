@@ -1,6 +1,6 @@
 # Table of contents
 
 * [Metaframework Prodígio](README.md)
-* [Textboxbind](untitled.md)
+* [Textboxbind](textboxbind.md)
 * [Listboxbind](listboxbind.md)
 
