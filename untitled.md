@@ -1,7 +1,5 @@
 # Texboxbind
 
-![Exemplo visual do componente.](.gitbook/assets/image.png)
-
 ### Sobre
 
 Este componente é uma caixa de edição utilizada para a manipulação de texto pelo usuário.
