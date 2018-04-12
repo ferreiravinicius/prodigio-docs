@@ -55,14 +55,15 @@ Atributos Principais
 | **Atributo** | **Tipo** | **Descrição** |
 | --- | --- | --- |
 | `nomeDoObjeto` | String | Especifica o objeto que será vinculado ao componente.  |
-| `id` | String | Alias para o nome do objeto. Apenas o nome da propriedade precisa ser especificado, sem a necessidade de especificar `classecontrole.objetoAtual`. Não sobrescreve `nomeDoObjeto`. |
+| `id` | String | Alias para o `nomeDoObjeto`. Apenas o nome da propriedade precisa ser especificado, sem a necessidade de especificar `classecontrole.objetoAtual`. **Não** sobrescreve `nomeDoObjeto`. |
 
 Atributos Secundários
 
 | **Atributo** |  **Tipo** | **Descrição** |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | `paste` | Boolean | Seta se o usuário pode colar no campo. Como padrão `true`. |
 | `upper` | Boolean | Seta se o texto digitado será convertido para caixa alta. Como padrão `true`. |
 | `somenteNumero` | Boolean | Filtra o campo para aceitar apenas caracteres numericos. Como padrão `false`. |
 | `mask` | String | Define uma máscara para o campo. Use `S` para alfabéticos, `9` para numéricos opcionais, `0` para numéricos obrigatórios e `A` para alfanuméricos. Exemplo para placa: `SSS-0000`. |
+| `usaLike` | String | Formata o retorno do campo para ser utilizado pelo operador `LIKE` em consultas de banco. Normalmente utilizado quando o campo irá servir de filtro ou consulta. Os valores possíveis são `INICIO`, `FINAL` e `AMBOS`. |
 
