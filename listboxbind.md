@@ -6,7 +6,7 @@ description: >-
 
 # Listboxbind
 
-![Exemplo visual do componente.](.gitbook/assets/image.png)
+![Exemplo visual do componente.](.gitbook/assets/image%20%282%29.png)
 
 ### Sobre
 
