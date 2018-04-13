@@ -4,4 +4,5 @@
 * [Textboxbind](textboxbind.md)
 * [Listboxbind](listboxbind.md)
 * [Bandboxbind](bandboxbind.md)
+* [Release Notes](release-notes.md)
 
