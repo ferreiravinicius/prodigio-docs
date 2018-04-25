@@ -60,6 +60,46 @@ public class FuncionarioVO extends ArenaBaseVO {
 ```
 {% endtab %}
 
+{% tab title="XML \(Opção 2\)" %}
+```markup
+<listbox model="@{classecontrole.auditoria}">
+    <listhead>
+        <listheader label="Id" />
+        <listheader label="Data" />
+        <listheader label="Usuário" />
+        <listheader label="Operação" />
+        <listheader label="Campos Alterados" width="10%" />
+    </listhead>
+    <listitem self="@{each=item}" value="@{item}">
+        <listcell label="@{item.id}" />
+        <listcell label="@{item.dataOperacaoFormatado} " />
+        <listcell label="@{item.usuarioLogado}" />
+        <listcell label="@{item.tipoOperacaoFormatado}" />
+        <listcell>
+            <button label="Exibir" onClick="((Popup)self.getNextSibling()).open(self)"></button>
+            <popup id="tblcampos" width="80%">
+                <listbox model="@{item.campos}">
+                    <listhead>
+                        <listheader label="Campo" />
+                        <listheader label="Propriedade" />
+                        <listheader label="Valor Antigo" />
+                        <listheader label="Valor Novo" />
+                    </listhead>
+                    <listitem self="@{each=campo}" value="@{campo}">
+                        <listcell label="@{campo.labelCampo}" />
+                        <listcell label="@{campo.nomeCampo}" />
+                        <listcell label="@{campo.valorAntigo}" />
+                        <listcell label="@{campo.valorNovo}" />
+                    </listitem>
+                </listbox>
+                <button label="Fechar" onClick="((Popup)self.getParent()).close()" />
+            </popup>
+        </listcell>
+    </listitem>
+</listbox>
+```
+{% endtab %}
+
 {% tab title="Controller" %}
 ```java
 public class FuncionarioCtr extends ArenaBaseCtr<FuncionarioVO> {
