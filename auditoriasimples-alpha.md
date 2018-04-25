@@ -4,6 +4,12 @@ description: Funcionalidade de auditoria simples.
 
 # @AuditoriaSimples \(alpha\)
 
+Para auditar uma entidade é necessário anotar a classe com `@AuditoriaSimples` e passar como parâmetro os campos a serem auditados com seus respectivos _labels. _ 
+
+Ao declarar os campos a serem auditados utilize a notação `label:propriedade`.   
+Em  `label` definimos um identificador para o campo, caso não seja especificado o mesmo será inferido com o mesmo nome da `propriedade`.   
+Em `propriedade` declaramos o nome da propriedade existente na entidade que irá ser auditada. 
+
 {% tabs %}
 {% tab title="Entidade" %}
 ```java
@@ -12,7 +18,7 @@ public class FuncionarioVO extends ArenaBaseVO {
 
     private String nome;
     private String telefone;
-    private  FuncionarioVO supervisor;
+    private FuncionarioVO supervisor;
     private Set<DependenteVO> dependentes = new LinkedHashSet<DependenteVO>(); 
     
     //Getters e Setters ocultados para brevidade do exemplo    
@@ -113,5 +119,7 @@ public class FuncionarioCtr extends ArenaBaseCtr<FuncionarioVO> {
 {% endtab %}
 {% endtabs %}
 
-
+{% hint style="info" %}
+Para as propriedades que referenciam outros objetos não primitivos ou coleções é considerado o `toString()` do mesmo. Também é possível declarar propriedades de objetos aninhados, utilizando a notação `objetoAninhado.propriedade`.
+{% endhint %}
 
