@@ -20,7 +20,19 @@ public class FuncionarioVO extends ArenaBaseVO {
 ```
 {% endtab %}
 
-{% tab title="XML" %}
+{% tab title="Controller" %}
+```java
+public class FuncionarioCtr extends ArenaBaseCtr<FuncionarioVO> {
+
+    public Set<?> getAuditoria()  throws Exception {
+        return repositorio().recuperarAuditoriaSimples(getObjetoAtual());
+    }
+    //try-catch ocultados para brevidade do exemplo
+}
+```
+{% endtab %}
+
+{% tab title="XML \(Opção 1\)" %}
 ```markup
 <grid model="@{classecontrole.auditoria}" mold="paging" pageSize="5">
     <columns>
@@ -30,14 +42,14 @@ public class FuncionarioVO extends ArenaBaseVO {
         <column label="Usuário" />
         <column label="Operação" />
     </columns>
-    <template name="model">
-        <row>
-            <label value="${each.id}" />
-            <label value="${each.dataOperacaoFormatado}" />
-            <label value="${each.usuarioLogado}" />
-            <label value="${each.tipoOperacaoFormatado}" />
+    <rows>
+        <row self="@{each=aud}" value="@{aud}">
+            <label value="@{aud.id}" />
+            <label value="@{aud.dataOperacaoFormatado}" />
+            <label value="@{aud.usuarioLogado}" />
+            <label value="@{aud.tipoOperacaoFormatado}" />
             <detail open="false">
-                <grid>
+                <grid model="@{aud.campos}">
                     <columns>
                         <column label="Campo" />
                         <column label="Propriedade" />
@@ -45,17 +57,17 @@ public class FuncionarioVO extends ArenaBaseVO {
                         <column label="Valor Novo" />
                     </columns>
                     <rows>
-                        <row forEach="${each.campos}">
-                            <label value="${each.labelCampo}" />
-                            <label value="${each.nomeCampo}" />
-                            <label value="${each.valorAntigo}" />
-                            <label value="${each.valorNovo}" />
+                        <row self="@{each=campo}" value="@{campo}">
+                            <label value="@{campo.labelCampo}" />
+                            <label value="@{campo.nomeCampo}" />
+                            <label value="@{campo.valorAntigo}" />
+                            <label value="@{campo.valorNovo}" />
                         </row>
                     </rows>
                 </grid>
             </detail>
         </row>
-    </template>
+    </rows>
 </grid>
 ```
 {% endtab %}
@@ -97,19 +109,6 @@ public class FuncionarioVO extends ArenaBaseVO {
         </listcell>
     </listitem>
 </listbox>
-```
-{% endtab %}
-
-{% tab title="Controller" %}
-```java
-public class FuncionarioCtr extends ArenaBaseCtr<FuncionarioVO> {
-
-    public List<Object> getAuditoria()  throws Exception {
-        List<Object> retorno = new ListModelList<Object>(repositorio().recuperarAuditoriaSimples(getObjetoAtual()));
-		return retorno;
-    }
-    //try-catch ocultados para brevidade do exemplo
-}
 ```
 {% endtab %}
 {% endtabs %}
