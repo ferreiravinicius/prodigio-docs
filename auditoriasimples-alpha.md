@@ -4,16 +4,22 @@ description: Funcionalidade de auditoria simples.
 
 # @AuditoriaSimples \(alpha\)
 
+### Sobre
+
+Cria auditoria simples de uma entidade específica. É criado uma entrada na tabela de auditoria para cada operação do tipo inclusão, alteração ou exclusão de registro. Cada campo anotado que tenha sofrido qualquer alteração é associado com seu respectivo objeto de auditoria. 
+
+### Funcionamento
+
 Para auditar uma entidade é necessário anotar a classe com `@AuditoriaSimples` e passar como parâmetro os campos a serem auditados com seus respectivos _labels. _ 
 
-Ao declarar os campos a serem auditados utilize a notação `label:propriedade`.   
+Ao declarar os campos a serem auditados utilize a notação `propriedade:label`.   
 Em  `label` definimos um identificador para o campo, caso não seja especificado o mesmo será inferido com o mesmo nome da `propriedade`.   
 Em `propriedade` declaramos o nome da propriedade existente na entidade que irá ser auditada. 
 
 {% tabs %}
 {% tab title="Entidade" %}
 ```java
-@AuditoriaSimples(campos = { "Nome:nome", "Supervisor:supervisor.nome", "Lista de Dependentes:dependentes", "Nome do Dependente:dependentes.nome" })
+@AuditoriaSimples(campos = { "nome:Nome", "supervisor.nome:Supervisor", "dependentes:Lista de Dependentes", "dependentes.nome:Nomes dos Dependentes:" })
 public class FuncionarioVO extends ArenaBaseVO {
 
     private String nome;
@@ -120,6 +126,22 @@ public class FuncionarioCtr extends ArenaBaseCtr<FuncionarioVO> {
 {% endtabs %}
 
 {% hint style="info" %}
-Para as propriedades que referenciam outros objetos não primitivos ou coleções é considerado o `toString()` do mesmo. Também é possível declarar propriedades de objetos aninhados, utilizando a notação `objetoAninhado.propriedade`.
+Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção, é utilizado o `toString()` do objeto na comparação e ao persistir no banco.
 {% endhint %}
+
+{% hint style="info" %}
+É possível declarar propriedades de objetos aninhados em vários níveis, utilizando a notação `objeto.bjetoAninhado.propriedade`.
+{% endhint %}
+
+### Propriedades
+
+| **Método** | **Retorno** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ` getId()` | `Long` |  Recupera o ID no banco referente a auditoria. |
+| `getCampos()` | `Collection` | Recupera os campos alterados que estão associados a auditoria. É retornado um `Set` com objetos do tipo `CampoAuditadoVO`. |
+| `getDataOperacao()` | `Date` | Recupera a data que ocorreu a operação auditada. |
+| `getEntidade()` | `String` | Recupera o nome completo da classe do objeto principal o qual foi auditado. |
+| `getObjetoId()` | `Long` | Recupera o ID do objeto principal o qual foi auditado. |
+| `getUsuarioLogado()` | `String` | Recupera o identificador do usuário que efetuou a operação. |
+| `getTipoOperacao()` | `Character` | Recupera o caractere respectivo ao tipo de operação, onde `A` representa alteração, `I` inclusão e `E` exclusão. |
 
