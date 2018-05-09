@@ -133,7 +133,9 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 É possível declarar propriedades de objetos aninhados em vários níveis, utilizando a notação `objeto.bjetoAninhado.propriedade`.
 {% endhint %}
 
-### Propriedades
+### Métodos
+
+#### AuditoriaSimplesVO
 
 | **Método** | **Retorno** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -144,4 +146,17 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 | `getObjetoId()` | `Long` | Recupera o ID do objeto principal o qual foi auditado. |
 | `getUsuarioLogado()` | `String` | Recupera o identificador do usuário que efetuou a operação. |
 | `getTipoOperacao()` | `Character` | Recupera o caractere respectivo ao tipo de operação, onde `A` representa alteração, `I` inclusão e `E` exclusão. |
+
+#### CampoAuditadoVO
+
+| **Método** | **Retorno** |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `getId()` | `Long` | Recupera o ID no banco referente ao campo auditado. |
+| `getLabelCampo()` | `String` | Recupera o _label_ associado ao campo auditado. |
+| `getNomeCampo()` | `String` | Recupera o nome do campo/propriedade que foi auditada.  |
+| `getValorAntigo()` | `String` | Recupera o valor  do campo antes da alteração, se houver. |
+| `getValorNovo()` | `String` | Recupera o valor do campo após a alteração, se houver. |
+| `getEntidadePai()` | `String` | Recupera o nome completo da classe do objeto ao qual o campo alterado pertença. |
+| `getIdObjetoPai()` | `Long` | Recupera o ID no banco do objeto ao qual o campo alterado pertença. |
+| `getAuditoria()` | `AuditoriaSimplesVO` | Recupera o objeto de auditoria no qual o campo auditado pertença. |
 
