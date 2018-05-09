@@ -2,7 +2,7 @@
 description: Funcionalidade de auditoria simples.
 ---
 
-# @AuditoriaSimples \(alpha\)
+# Auditoria Simples \(beta\)
 
 ### Sobre
 
