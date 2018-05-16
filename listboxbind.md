@@ -64,7 +64,7 @@ Todos atributos e suas respectivas descrições podem ser visualizados no [sumá
 
 | **Atributo** | **Tipo** | **Descrição** |
 | --- | --- | --- | --- | --- |
-| ` nomeDoObjeto` | Collection | Vincula um objeto da classe entidade que representa uma coleção  [`@ManyToMany`](https://docs.oracle.com/javaee/7/api/javax/persistence/ManyToMany.html) persistida.  |
+|  `nomeDoObjeto` | Collection | Vincula um objeto da classe entidade que representa uma coleção  [`@ManyToMany`](https://docs.oracle.com/javaee/7/api/javax/persistence/ManyToMany.html) persistida.  |
 | `colecaoModelo` | Collection | Seta a coleção que irá listar todos os possíveis itens que possam vir a ser selecionados. |
 | `propriedadeVisualizada` | String | Seta o nome da propriedade da classe entidade que será exibida em cada item listado no componente. Padrão `toString()` da classe. |
 | `titulo` | String | Define o título que será exibido no cabeçalho da caixa que envolve os itens listados. Não irá possuir cabeçalho se não for definido. |

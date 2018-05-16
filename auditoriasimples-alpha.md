@@ -10,7 +10,7 @@ Cria auditoria simples de uma entidade específica. É criado uma entrada na tab
 
 ### Funcionamento
 
-Para auditar uma entidade é necessário anotar a classe com `@AuditoriaSimples` e passar como parâmetro os campos a serem auditados com seus respectivos _labels. _ 
+Para auditar uma entidade é necessário anotar a classe com `@AuditoriaSimples` e passar como parâmetro os campos a serem auditados com seus respectivos _labels._  
 
 Ao declarar os campos a serem auditados utilize a notação `propriedade:label`.   
 Em  `label` definimos um identificador para o campo, caso não seja especificado o mesmo será inferido com o mesmo nome da `propriedade`.   
@@ -139,7 +139,7 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 
 | **Método** | **Retorno** |  |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| ` getId()` | `Long` |  Recupera o ID no banco referente a auditoria. |
+|  `getId()` | `Long` |  Recupera o ID no banco referente a auditoria. |
 | `getCampos()` | `Collection` | Recupera os campos alterados que estão associados a auditoria. É retornado um `Set` com objetos do tipo `CampoAuditadoVO`. |
 | `getDataOperacao()` | `Date` | Recupera a data que ocorreu a operação auditada. |
 | `getEntidade()` | `String` | Recupera o nome completo da classe do objeto principal o qual foi auditado. |
