@@ -7,4 +7,5 @@
 * [Release Notes](release-notes.md)
 * [Auditoria Simples \(beta\)](auditoriasimples-alpha.md)
 * [Limpando ZK Theme](limpando-zk-theme.md)
+* [Decimalboxbind](decimalboxbind.md)
 
