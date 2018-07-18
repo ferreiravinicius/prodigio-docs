@@ -56,38 +56,33 @@ Exemplo da configuração final do **`zk.xml`**
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-No projeto do prodigio, remover os temas do `pom.xml` do pacote `prodigio-web-zk`.
+No pom.xml do frontend remover as dependências de tema da seguinte forma:
 
+{% code-tabs %}
+{% code-tabs-item title="projeto-frontend/pom.xml" %}
 ```markup
-<!-- ZK theme -->
-<dependency>
-	<groupId>org.zkoss.theme</groupId>
-	<artifactId>sapphire</artifactId>
-	<version>${version.zk}</version>
-</dependency>
-<dependency>
-	<groupId>org.zkoss.theme</groupId>
-	<artifactId>silvertail</artifactId>
-	<version>${version.zk}</version>
-</dependency>
-<dependency>
-	<groupId>org.zkoss.addons</groupId>
-	<artifactId>zk-bootstrap</artifactId>
-	<version>1.0.0</version>
-	<exclusions>
-		<exclusion>
-			<artifactId>zul</artifactId>
-			<groupId>org.zkoss.zk</groupId>
-		</exclusion>
-		<exclusion>
-			<artifactId>zkmax</artifactId>
-			<groupId>org.zkoss.zk</groupId>
-		</exclusion>
-		<exclusion>
-			<artifactId>zkex</artifactId>
-			<groupId>org.zkoss.zk</groupId>
-		</exclusion>
-	</exclusions>
-</dependency>
+	<dependency>
+			<groupId>br.mg.gov.prodemge.prodigio</groupId>
+			<artifactId>prodigio-web-zk</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>sapphire</artifactId>
+					<groupId>org.zkoss.theme</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>silvertail</artifactId>
+					<groupId>org.zkoss.theme</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>zk-bootstrap</artifactId>
+					<groupId>org.zkoss.addons</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
 
