@@ -1,6 +1,6 @@
 # DEPRECATED
 
-Esta documentação não esta alinhada e atualizada conforme o desenvolvimento do Metaframework. A mesma não possuí nenhum vinculo com a Prodemge ou afins. 
+Esta documentação não esta alinhada e atualizada conforme o desenvolvimento do Metaframework. A mesma não possuí nenhum vinculo com a Prodemge.
 
 # Metaframework Prodígio
 
