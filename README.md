@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Esta documentação não esta alinhada e atualizada conforme o desenvolvimento do Metaframework. A mesma não possuí nenhum vinculo com a Prodemge ou afins. 
+
 # Metaframework Prodígio
 
 ![](.gitbook/assets/image%20%281%29.png)
