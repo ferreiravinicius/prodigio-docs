@@ -37,7 +37,7 @@ public class MinhaEntidadeVO extends TutorialBaseVO {
 ## Sumário
 
 | **Atributo** | **Tipo** | **Descrição** |
-| --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `nomeDoObjeto` | `BigDecimal` ou `Double` | Seta o nome do objeto a partir da classe controle que sera vinculado \(_binded_\) ao componente. |
 | `isDouble` | `Boolean` | Seta se o objeto vinculado ao componente é do tipo `Double`. Por padrão `false` . |
 | `mascara` | `Boolean` | Seta se o componente irá receber a máscara em tempo real no lado do cliente \(Javascript\). Por padrão `true`. |

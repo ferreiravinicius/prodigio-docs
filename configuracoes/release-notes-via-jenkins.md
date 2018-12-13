@@ -1,7 +1,3 @@
----
-description: Guia para a geração de Release Notes pelo Portal de Arquitetura Corporativa.
----
-
 # Release Notes via Jenkins
 
 ## Entrada de Dados pelo Jenkins
@@ -22,7 +18,7 @@ A entrada de dados deve seguir as seguintes normas:
 Para que um commit seja identificado como release ou versão, o mesmo deve ser **explicitamente** anotado seguindo as seguintes normas:
 
 | Anotação | Descrição |
-| --- | --- | --- | --- |
+| :--- | :--- |
 | @release | Novas funcionalidades, alterações ou qualquer tipo de novidade. |
 | @bugfix | Correção de bugs. |
 | @versao | Anotação explicita de que o commit é referente a uma nova versão. Utilizado para versões geradas manualmente. |

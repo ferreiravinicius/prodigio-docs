@@ -1,7 +1,3 @@
----
-description: Funcionalidade de auditoria simples.
----
-
 # Auditoria Simples \(beta\)
 
 ### Sobre
@@ -138,7 +134,7 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 #### AuditoriaSimplesVO
 
 | **Método** | **Retorno** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 |  `getId()` | `Long` |  Recupera o ID no banco referente a auditoria. |
 | `getCampos()` | `Collection` | Recupera os campos alterados que estão associados a auditoria. É retornado um `Set` com objetos do tipo `CampoAuditadoVO`. |
 | `getDataOperacao()` | `Date` | Recupera a data que ocorreu a operação auditada. |
@@ -150,7 +146,7 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 #### CampoAuditadoVO
 
 | **Método** | **Retorno** |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | `getId()` | `Long` | Recupera o ID no banco referente ao campo auditado. |
 | `getLabelCampo()` | `String` | Recupera o _label_ associado ao campo auditado. |
 | `getNomeCampo()` | `String` | Recupera o nome do campo/propriedade que foi auditada.  |

@@ -1,11 +1,21 @@
 # Table of contents
 
 * [Metaframework Prodígio](README.md)
-* [Textboxbind](textboxbind.md)
-* [Listboxbind](listboxbind.md)
-* [Bandboxbind](bandboxbind.md)
-* [Auditoria Simples \(beta\)](auditoriasimples-alpha.md)
-* [Limpando ZK Theme](limpando-zk-theme.md)
-* [Decimalboxbind](decimalboxbind.md)
-* [Release Notes via Jenkins](release-notes-via-jenkins.md)
+
+## Componentes
+
+* [Textboxbind](componentes/textboxbind.md)
+* [Listboxbind](componentes/listboxbind.md)
+* [Bandboxbind](componentes/bandboxbind.md)
+* [Decimalboxbind](componentes/decimalboxbind.md)
+
+## Funcionalidades
+
+* [Auditoria Simples \(beta\)](funcionalidades/auditoriasimples-alpha.md)
+* [Untitled](funcionalidades/untitled.md)
+
+## Configurações
+
+* [Limpando ZK Theme](configuracoes/limpando-zk-theme.md)
+* [Release Notes via Jenkins](configuracoes/release-notes-via-jenkins.md)
 
