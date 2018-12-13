@@ -1,4 +1,4 @@
-# Auditoria Simples \(beta\)
+# Auditoria Simples
 
 ### Sobre
 
@@ -135,24 +135,97 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 
 | **Método** | **Retorno** |  |
 | :--- | :--- | :--- |
-|  `getId()` | `Long` |  Recupera o ID no banco referente a auditoria. |
-| `getCampos()` | `Collection` | Recupera os campos alterados que estão associados a auditoria. É retornado um `Set` com objetos do tipo `CampoAuditadoVO`. |
-| `getDataOperacao()` | `Date` | Recupera a data que ocorreu a operação auditada. |
-| `getEntidade()` | `String` | Recupera o nome completo da classe do objeto principal o qual foi auditado. |
-| `getObjetoId()` | `Long` | Recupera o ID do objeto principal o qual foi auditado. |
-| `getUsuarioLogado()` | `String` | Recupera o identificador do usuário que efetuou a operação. |
-| `getTipoOperacao()` | `Character` | Recupera o caractere respectivo ao tipo de operação, onde `A` representa alteração, `I` inclusão e `E` exclusão. |
+|  `getId()` | `Long` |  Recupera o `Id` referente ao objeto da auditoria em si. |
+| `getCampos()` | `Set<CampoAuditadoVO>` | Recupera a lista de campos alterados. |
+| `getDataOperacao()` | `Date` | Recupera a data da auditoria. |
+| `getEntidade()` | `String` | Recupera o nome completo da classe da entidade sendo auditada. |
+| `getObjetoId()` | `Long` | Recupera o `Id` referente ao objeto da entidade que foi auditado. |
+| `getUsuarioLogado()` | `String` | Recupera o identificador do usuário que efetuou a operação \(crud\). |
+| `getTipoOperacao()` | `Character` | Recupera o caractere respectivo ao tipo da operação que iniciou a auditoria. Onde `A` representa alteração, `I` inclusão e `E` exclusão. |
 
 #### CampoAuditadoVO
 
-| **Método** | **Retorno** |  |
-| :--- | :--- | :--- |
-| `getId()` | `Long` | Recupera o ID no banco referente ao campo auditado. |
-| `getLabelCampo()` | `String` | Recupera o _label_ associado ao campo auditado. |
-| `getNomeCampo()` | `String` | Recupera o nome do campo/propriedade que foi auditada.  |
-| `getValorAntigo()` | `String` | Recupera o valor  do campo antes da alteração, se houver. |
-| `getValorNovo()` | `String` | Recupera o valor do campo após a alteração, se houver. |
-| `getEntidadePai()` | `String` | Recupera o nome completo da classe do objeto ao qual o campo alterado pertença. |
-| `getIdObjetoPai()` | `Long` | Recupera o ID no banco do objeto ao qual o campo alterado pertença. |
-| `getAuditoria()` | `AuditoriaSimplesVO` | Recupera o objeto de auditoria no qual o campo auditado pertença. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Método</b>
+      </th>
+      <th style="text-align:left"><b>Retorno</b>
+      </th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>getId()</code>
+      </td>
+      <td style="text-align:left"><code>Long</code>
+      </td>
+      <td style="text-align:left">Recupera o <code>Id</code> referente ao objeto do campo auditado em si.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getLabelCampo()</code>
+      </td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left">Recupera o <code>label</code> associado ao campo auditado (declarado em <code>campos</code> na
+        anotação).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getNomeCampo()</code>
+      </td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left">Recupera o nome do campo/propriedade que foi auditada (declarado em <code>campos</code> na
+        anotação).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getValorAntigo()</code>
+      </td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left">Recupera o valor do campo antes da alteração, se houver.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getValorNovo()</code>
+      </td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left">Recupera o valor do campo após a alteração, se houver.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getEntidadePai()</code>
+      </td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left">
+        <p>Recupera o nome completo da classe referente ao objeto ao qual o campo/propriedade
+          auditada pertence.</p>
+        <p></p>
+        <p>Exemplo: para <code>objetoAninhado.outroObjeto.propriedade</code> retornaria
+          a classe respectiva ao <code>outroObjeto</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getIdObjetoPai()</code>
+      </td>
+      <td style="text-align:left"><code>Long</code>
+      </td>
+      <td style="text-align:left">
+        <p>Recupera o <code>Id</code> referente ao objeto ao qual o campo/propriedade
+          pertence.</p>
+        <p></p>
+        <p>Exemplo: para <code>objetoAninhado.outroObjeto.propriedade</code> retornaria
+          o <code>Id</code> respectivo ao<code>outroObjeto</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>getAuditoria()</code>
+      </td>
+      <td style="text-align:left"><code>AuditoriaSimplesVO</code>
+      </td>
+      <td style="text-align:left">Recupera o objeto de auditoria no qual o campo auditado esta associado.</td>
+    </tr>
+  </tbody>
+</table>
 

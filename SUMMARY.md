@@ -11,7 +11,7 @@
 
 ## Funcionalidades
 
-* [Auditoria Simples \(beta\)](funcionalidades/auditoriasimples-alpha.md)
+* [Auditoria Simples](funcionalidades/auditoriasimples-alpha.md)
 * [Untitled](funcionalidades/untitled.md)
 
 ## Configurações
