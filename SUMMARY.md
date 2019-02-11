@@ -8,6 +8,7 @@
 * [Listboxbind](componentes/listboxbind.md)
 * [Bandboxbind](componentes/bandboxbind.md)
 * [Decimalboxbind](componentes/decimalboxbind.md)
+* [Comboboxbind \(custom\)](componentes/comboboxbind-custom.md)
 
 ## Funcionalidades
 
