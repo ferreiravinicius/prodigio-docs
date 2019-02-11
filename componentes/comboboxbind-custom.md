@@ -4,6 +4,8 @@
 
 Este componente é uma caixa de edição especial com uma lista de seleção em _dropdown_ embutida. Similar a tag `select` do HTML.
 
+![](../.gitbook/assets/ss-combobox.png)
+
 {% hint style="info" %}
 Atualmente este componente não faz parte do Prodígio. Necessário importar as classes no projeto.
 {% endhint %}
