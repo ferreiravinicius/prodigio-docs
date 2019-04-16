@@ -148,7 +148,7 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><b>Método</b>
+      <th style="text-align:left"><b>M&#xE9;todo</b>
       </th>
       <th style="text-align:left"><b>Retorno</b>
       </th>
@@ -169,7 +169,7 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
       <td style="text-align:left"><code>String</code>
       </td>
       <td style="text-align:left">Recupera o <code>label</code> associado ao campo auditado (declarado em <code>campos</code> na
-        anotação).</td>
+        anota&#xE7;&#xE3;o).</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>getNomeCampo()</code>
@@ -177,21 +177,21 @@ Se a propriedade referenciar um objeto de outra entidade \(VO\) ou uma coleção
       <td style="text-align:left"><code>String</code>
       </td>
       <td style="text-align:left">Recupera o nome do campo/propriedade que foi auditada (declarado em <code>campos</code> na
-        anotação).</td>
+        anota&#xE7;&#xE3;o).</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>getValorAntigo()</code>
       </td>
       <td style="text-align:left"><code>String</code>
       </td>
-      <td style="text-align:left">Recupera o valor do campo antes da alteração, se houver.</td>
+      <td style="text-align:left">Recupera o valor do campo antes da altera&#xE7;&#xE3;o, se houver.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>getValorNovo()</code>
       </td>
       <td style="text-align:left"><code>String</code>
       </td>
-      <td style="text-align:left">Recupera o valor do campo após a alteração, se houver.</td>
+      <td style="text-align:left">Recupera o valor do campo ap&#xF3;s a altera&#xE7;&#xE3;o, se houver.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>getEntidadePai()</code>
