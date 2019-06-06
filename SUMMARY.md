@@ -15,6 +15,10 @@
 * [Auditoria Simples](funcionalidades/auditoriasimples-alpha.md)
 * [Listar Baseado no Exemplo](funcionalidades/untitled.md)
 
+## Padrões
+
+* [Mapeando Entidades](padroes/mapeando-entidades.md)
+
 ## Configurações
 
 * [Limpando ZK Theme](configuracoes/limpando-zk-theme.md)
